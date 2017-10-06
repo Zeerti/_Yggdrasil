@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIRA", "JIRA\JIRA.csproj", "{4F04B18A-657F-4C0D-A803-C2311B342469}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C039920B-E698-4171-B2A1-480F08BCC1DF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Yggdrasil Images\MainToolWindowBackground.png = ..\..\..\Desktop\Yggdrasil Images\MainToolWindowBackground.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
