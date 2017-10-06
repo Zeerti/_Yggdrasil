@@ -30,5 +30,10 @@ namespace JIRA
             mainWindow.Show();
             this.Close();
         }
+
+        private void TwitterButton_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

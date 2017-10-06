@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:JIRA"
         mc:Ignorable="d"
         Title="Yggdrasil - Brink Tools" Height="446" Width="713" BorderThickness="0" WindowStartupLocation="CenterScreen" BorderBrush="#FBFFFF0F" ResizeMode="CanMinimize" WindowStyle="None">
@@ -10,12 +11,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="Login Image.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="310,379,0,0" VerticalAlignment="Top" Width="75" Background="#FFF4F433" BorderThickness="0" Height="25" Click="btnLogin_Click"/>
+        <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="310,379,0,0" VerticalAlignment="Top" Width="75" Background="#FFF4F433" BorderThickness="0" Height="25" Click="btnLogin_Click" BorderBrush="{x:Null}"/>
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="25" Margin="253,306,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="200" BorderThickness="0" Background="#FFF4F433" FontFamily="Calibri" MaxLines="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <Label x:Name="Username" Content="Username:" HorizontalAlignment="Left" Margin="185,306,0,0" VerticalAlignment="Top" FontFamily="Calibri"/>
+        <Label x:Name="Username" Content="Username:" HorizontalAlignment="Left" Margin="185,306,0,0" VerticalAlignment="Top" FontFamily="Calibri" Background="{x:Null}" Foreground="#DD000000"/>
 
-        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="188,336,0,0" VerticalAlignment="Top" FontFamily="Calibri"/>
-        <PasswordBox x:Name="txtPassword" Margin="253,336,0,0" VerticalAlignment="Top" Width="200" Height="25" Background="#FFF4F40F" BorderThickness="0" HorizontalAlignment="Left"/>
+        <Label x:Name="Password" Content="Password:" HorizontalAlignment="Left" Margin="188,336,0,0" VerticalAlignment="Top" FontFamily="Calibri" Foreground="#DD000000"/>
+        <PasswordBox x:Name="txtPassword" Margin="253,336,0,0" VerticalAlignment="Top" Width="200" Height="25" Background="#FFF4F40F" BorderThickness="0" HorizontalAlignment="Left" />
 
     </Grid>
 </Window>

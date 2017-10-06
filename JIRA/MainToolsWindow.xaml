@@ -3,29 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns:local="clr-namespace:JIRA"
         mc:Ignorable="d"
-        Title="Yggdrasil - Home" Height="1080" Width="1920" BorderThickness="0" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Grid Margin="200,0,0,0" Background="#cfd8dc">
+        Title="Yggdrasil - Home" Width="1248" Height="800"  BorderThickness="0" WindowStartupLocation="CenterScreen">
 
-        </Grid>
-        <StackPanel HorizontalAlignment="Left" Height="1049" VerticalAlignment="Top" Width="200" Background="#455a64">
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,10,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-            <Button Content="Button" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="180" Margin="10,5,0,5" Height="30" Foreground="White" BorderBrush="{x:Null}" Background="#FF536DFE"/>
-
-        </StackPanel>
-
-    </Grid>
-
-
-
+    <DockPanel>
+        <Menu IsMainMenu="True" DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="Save">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentSave" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Save As.." />
+                <MenuItem Header="Exit" InputGestureText="Ctrl+E">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ExitToApp" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Excellent" IsCheckable="True" IsChecked="True" />
+                <MenuItem Header="Rubbish" IsCheckable="True" />
+                <MenuItem Header="Dig Deeper" InputGestureText="Ctrl+D">
+                    <MenuItem Header="Enlightenment?" IsCheckable="True" />
+                    <MenuItem Header="Disappointment" IsCheckable="True" />
+                </MenuItem>
+                <MenuItem Header="Look Deeper" InputGestureText="Ctrl+D">
+                    <MenuItem Header="Plain" />
+                    <MenuItem Header="Ice Cream" />
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Cut" Command="Cut">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentCut" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Copy" Command="Copy">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentCopy" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Paste" Command="Paste">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentPaste" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_About">
+                <MenuItem Header="Version">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="Cat"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </DockPanel>
 </Window>
