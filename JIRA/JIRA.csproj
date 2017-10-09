@@ -119,8 +119,5 @@
   <ItemGroup>
     <Resource Include="spacetrooper.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="MainToolWindowBackground.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
