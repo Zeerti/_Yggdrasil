@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialMenu="clr-namespace:MaterialMenu;assembly=MaterialMenu"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -15,7 +16,34 @@
         mc:Ignorable="d"
         Title="Yggdrasil - Home" Width="1248" Height="800"  BorderThickness="0" WindowStartupLocation="CenterScreen">
 
-    <DockPanel>
-        
-    </DockPanel>
+    <Grid>
+        <materialMenu:SideMenu HorizontalAlignment="Left" x:Name="CustomMenu"
+                               MenuWidth="300"
+                               State="Hidden"
+                               Theme="None"
+                               ButtonBackground="DodgerBlue"
+                               ButtonHover="DeepSkyBlue"
+                               ShadowBackground="Black" Loaded="CustomMenu_Loaded">
+            <materialMenu:SideMenu.Menu>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" Background="Blue">
+                    <StackPanel Orientation="Vertical">
+                        <Border Background="BlueViolet">
+                            <Grid Margin="10">
+                                <TextBox Height="100" BorderThickness="0" Background="Transparent" VerticalContentAlignment="Center" FontFamily="Calibri" FontSize="24" Foreground="WhiteSmoke" FontWeight="Bold">Yggdrasil Toolbox SideBar</TextBox>
+                            </Grid>
+                        </Border>
+                        <materialMenu:MenuButton Text="Sales Split"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Sync Error"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Logistics"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Org"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="SaveChanges"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Help"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Close Menu" Mouse.MouseDown="MenuButton_MouseDown"></materialMenu:MenuButton>
+                    </StackPanel>
+                </ScrollViewer>
+            </materialMenu:SideMenu.Menu>
+        </materialMenu:SideMenu>
+        <Button Content="HAMBURGER" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="119" Click="Button_Click_1"/>
+    </Grid>
+
 </Window>

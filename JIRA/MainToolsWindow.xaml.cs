@@ -31,9 +31,19 @@ namespace JIRA
             this.Close();
         }
 
-        private void TwitterButton_OnClick(object sender, RoutedEventArgs e)
+        private void CustomMenu_Loaded(object sender, RoutedEventArgs e)
         {
+       
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CustomMenu.Show();
+        }
+
+        private void MenuButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            CustomMenu.Hide();
         }
     }
 }
